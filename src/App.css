@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f7fafc;
+  overflow-x: hidden;
+}
+
+/* App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Input Section */
+.input-section {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Video Section */
+.video-section {
+  /* width: 100%; */
+  /* width: 100vw; */
+  margin-top: 20px;
+}
+
+/* Caption Display */
+.caption-display {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Caption List */
+.caption-list {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-section,
+  .caption-list {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .caption-display {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .caption-list {
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
